@@ -12,7 +12,6 @@ namespace CountWords
             // читаем весь файл с рабочего стола в строку текста
             string text = File.ReadAllText(@"/Semenkina/Text1.txt"); 
 
-
             // Сохраняем символы-разделители в массив
             char[] delimiters = new char[] { ' ', '\r', '\n' };
 
