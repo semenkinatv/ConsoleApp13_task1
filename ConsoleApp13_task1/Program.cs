@@ -18,7 +18,7 @@ namespace CountWords
             // разбиваем нашу строку текста, используя ранее перечисленные символы-разделители
             var words = text.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
             // выводим количество
-            Console.WriteLine($"Количество слов в рассказе 'Обломов': {words.Length}");
+            Console.WriteLine($"Количество слов в романе 'Обломов': {words.Length}");
             Console.WriteLine();
 
            //Поместим массив слов в Список
