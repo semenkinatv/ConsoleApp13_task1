@@ -9,8 +9,25 @@ namespace CountWords
     {
         static void Main(string[] args)
         {
-            // читаем весь файл с рабочего стола в строку текста
-            string text = File.ReadAllText(@"/Semenkina/Text1.txt"); 
+            string path;
+            // path = @"C:\Semenkina\Text1.txt";
+
+            while (true)
+            {
+                Console.WriteLine("\r\nВведите путь к файлу с текстом:");
+                path = Console.ReadLine();
+                if (!(File.Exists(path)))
+                {
+                    Console.WriteLine("Данный файл не существует!");
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            // читаем весь файл в строку текста
+            string text = File.ReadAllText(path); 
 
             // Сохраняем символы-разделители в массив
             char[] delimiters = new char[] { ' ', '\r', '\n' };
@@ -18,7 +35,7 @@ namespace CountWords
             // разбиваем нашу строку текста, используя ранее перечисленные символы-разделители
             var words = text.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
             // выводим количество
-            Console.WriteLine($"Количество слов в романе 'Обломов': {words.Length}");
+            Console.WriteLine("Сравним производительность вставки в List<T> и LinkedList<T>:");
             Console.WriteLine();
 
            //Поместим массив слов в Список
